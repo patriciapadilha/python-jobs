@@ -15,4 +15,15 @@ def read(path):
     list
         List of rows as dicts
     """
-    return []
+    import csv
+
+    with open(path) as jobs_file:
+        jobs = []
+        jobs_dict = csv.DictReader(jobs_file)
+        for job in jobs_dict:
+            jobs.append(job)
+    # print(jobs[0])
+    return jobs
+
+
+read("./src/jobs.csv")
