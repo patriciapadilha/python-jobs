@@ -117,9 +117,6 @@ def get_max_salary(path):
     return max(jobs_list)
 
 
-get_max_salary("./src/jobs.csv")
-
-
 def get_min_salary(path):
     """Get the minimum salary of all jobs
 
@@ -196,4 +193,11 @@ def filter_by_salary_range(jobs, salary):
     list
         Jobs whose salary range contains `salary`
     """
-    return []
+    jobs_list = []
+    for job in jobs:
+        try:
+            if matches_salary_range(job, salary):
+                jobs_list.append(job)
+        except ValueError:
+            print("Not a number")
+    return jobs_list
