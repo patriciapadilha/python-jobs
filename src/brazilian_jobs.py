@@ -21,5 +21,5 @@ def read_brazilian_file(path):
         job["title"] = job.pop("titulo")
         job["salary"] = job.pop("salario")
         job["type"] = job.pop("tipo")
-
+    print(dict_jobs)
     return dict_jobs

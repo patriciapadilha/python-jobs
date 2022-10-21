@@ -201,3 +201,28 @@ def filter_by_salary_range(jobs, salary):
         except ValueError:
             print("Not a number")
     return jobs_list
+
+
+# def read_brazilian_file(path):
+#     """Reads a portuguese file from a given path and returns its contents
+
+#     Parameters
+#     ----------
+#     path : str
+#         Full path to file
+
+#     Returns
+#     -------
+#     list
+#         List of rows as dicts
+#     """
+#     dict_jobs = read(path)
+#     for job in dict_jobs:
+#         job["title"] = job.pop("titulo")
+#         job["salary"] = job.pop("salario")
+#         job["type"] = job.pop("tipo")
+#     print(dict_jobs)
+#     return dict_jobs
+
+
+# read_brazilian_file("./src/jobs.csv")
