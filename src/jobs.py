@@ -22,5 +22,4 @@ def read(path):
         jobs_dict = csv.DictReader(jobs_file)
         for job in jobs_dict:
             jobs.append(job)
-    # print(jobs[0])
     return jobs
